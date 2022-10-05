@@ -230,6 +230,7 @@ paragraph' end' =
         '\n' -> do
           lNewline
           lift $ modify (delimitedActive .~ True)
+          appendInlineToStack Space
           next
         '\r' -> do
           lNewline
